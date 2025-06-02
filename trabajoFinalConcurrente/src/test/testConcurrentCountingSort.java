@@ -8,13 +8,18 @@ import java.util.Arrays;
 public class testConcurrentCountingSort {
 	
 	public static void main(String[] args) {
-		int[] array = new int[10];
-		ArraysUtil.fillWithRandomValues(array, 0, 2);
+		int[] array = new int[100000000];
+		ArraysUtil.fillWithRandomValues(array, 0, 100000000);
 		ConcurrentCountingSort cCS = new ConcurrentCountingSort(array);
+		long startTime;
+		long endTime;
 		
 		System.out.println("--- CONCURRENT ---");
 		//System.out.println("Unsorted array: " + Arrays.toString(cCS.getArray()));
-		System.out.println("Execution time: " + cCS.sort() / 1000000.0 + " ms");
+		startTime = System.nanoTime();
+		cCS.sort();
+		endTime = System.nanoTime();
+		System.out.println("Execution time: " + (endTime - startTime) / 1000000.0 + " ms");
 		//System.out.println("Sorted array: " + Arrays.toString(cCS.getArray()));
 	}
 	

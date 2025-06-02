@@ -15,11 +15,10 @@ public class SecuentialCountingSort {
 		this.array = array;
 	}
 	
-	public long sort() {
+	public void sort() {
 		int maxValue;
 		int[] countArray;
 		int[] sortedArray = new int[array.length];
-		long startTime = System.nanoTime();
 		
 		maxValue = array[0];
 		for(int i = 0; i < array.length; i++) {
@@ -44,7 +43,5 @@ public class SecuentialCountingSort {
 		}
 		
 		setArray(sortedArray);
-		
-		return System.nanoTime() - startTime;
 	}
 }
