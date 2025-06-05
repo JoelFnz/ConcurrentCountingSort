@@ -5,11 +5,11 @@ import data.ArraysUtil;
 
 import java.util.Arrays;
 
-public class testConcurrentCountingSort {
+public class TestConcurrentCountingSort {
 	
 	public static void main(String[] args) {
 		int[] array = new int[100000000];
-		ArraysUtil.fillWithRandomValues(array, 0, 100000000);
+		ArraysUtil.fillWithRandomValues(array, 0, 1000000);
 		ConcurrentCountingSort cCS = new ConcurrentCountingSort(array);
 		long startTime;
 		long endTime;

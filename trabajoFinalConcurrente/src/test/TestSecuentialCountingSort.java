@@ -6,11 +6,11 @@ import java.util.Arrays;
 
 import data.ArraysUtil;
 
-public class testSecuentialCountingSort {
+public class TestSecuentialCountingSort {
 	
 	public static void main(String[] args) {
 		int[] array = new int[100000000];
-		ArraysUtil.fillWithRandomValues(array, 0, 100000000);
+		ArraysUtil.fillWithRandomValues(array, 0, 1000000);
 		SecuentialCountingSort sCS = new SecuentialCountingSort(array);
 		long startTime;
 		long endTime;
